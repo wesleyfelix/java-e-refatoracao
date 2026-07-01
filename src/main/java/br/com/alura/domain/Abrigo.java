@@ -30,6 +30,10 @@ public class Abrigo {
         this.nome = nome;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
@@ -40,5 +44,12 @@ public class Abrigo {
 
     public void setPets(Pet[] pets) {
         this.pets = pets;
+    }
+
+    @Override
+    public String toString() {
+        return """
+                     "id":%s,"nome":"%s","telefone":"%s","email":"%s"
+                     """.formatted(this.id, this.nome, this.telefone, this.email);
     }
 }
